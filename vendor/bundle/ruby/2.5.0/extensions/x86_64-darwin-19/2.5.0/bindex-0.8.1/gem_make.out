@@ -1,0 +1,15 @@
+current directory: /Users/toyoshima_shota/projects/chat-space/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/toyoshima_shota/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200317-49225-1g290.rb extconf.rb
+creating Makefile
+
+current directory: /Users/toyoshima_shota/projects/chat-space/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/toyoshima_shota/projects/chat-space/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/toyoshima_shota/projects/chat-space/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20200317-49225-1j794zx/skiptrace/internal
