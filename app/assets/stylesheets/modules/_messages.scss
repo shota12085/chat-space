@@ -1,0 +1,169 @@
+*{
+  box-sizing: border-box;
+}
+/*メイン画面*/
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+/*サイド（左）画面*/
+.side-bar{
+  width: 300px;
+  height: 100%;
+  background-color: #253141;
+  /*名前表示*/
+  .user-name {
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: $font-color;
+    align-items: center;
+    padding: 20px;
+    text-decoration: none;
+    &__name {
+      width: 200px;
+      height: 20px;
+      line-height: 20px;
+    }
+    &__menu {
+      width: 60px;
+      height: 20px;
+      line-height: 20px;
+      text-align: right;
+    }
+    &__edit {
+      padding-right: 5px;
+    }
+    &__icon {
+      color: $font-color;
+    }
+  }
+  /*チャットグループ表示*/
+  .group-list {
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    padding: 20px;
+    color: $font-color;
+    &__group-name {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+    &__message {
+      font-size: 11px;
+      margin-bottom: 40px;
+    }
+  }
+}
+/*チャット（右）画面*/
+.main-chat{
+  width: calc(100vw - 300px);
+  background-color: $font-color;
+
+  /*チャット画面ヘッダー*/
+  .group-info {
+    background-color: $font-color;
+    height: 100px;
+    border-bottom: 1px solid #eeeeee;
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    &__group {
+      margin-top: 35px;
+    }
+    &__group-name{
+      font-size: 20px;
+      color: #333333;
+      margin-bottom: 15px;
+    }
+    &__group-member {
+      color: #999999;
+      font-size: 12px;
+    }
+    &__menu {
+      margin-top: 28px;
+      width: 72px;
+      height: 40px;
+      line-height: 40px;
+      padding: 0px 20px;
+      display: block;
+      border: 1px solid #38aef0;
+    }
+    &__edit {
+      font-size: 16px;
+      color: #38aef0;
+      text-decoration: none;
+    }
+  }
+  /*チャット画面メッセージ*/
+  .message-list {
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    &__group{
+      display: flex;
+    }
+    &__user-name {
+      color: #333333;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    &__date {
+      color: #999999;
+      font-size: 12px;
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+    &__user-message {
+      color: #434a54;
+      font-size: 14px;
+      margin-bottom: 10px;
+      padding-bottom: 40px;
+    }
+  }
+  /*フォーム画面*/
+  .form {
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 20px 40px;
+    form {
+      display: flex;
+      width: 100%;
+        .form-input {
+          width: 100%;
+          display: flex;
+          position: relative;
+          &__text{
+            width: 100%;
+            height: 50px;
+            padding: 0 40px 0 10px;
+            color: #434a54;
+            border-style: none;
+          }
+          &__image{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.3rem;
+            cursor: pointer;
+          }
+          &__image__file{
+            display: none;
+          }
+          &__submit-btn {
+            height: 50px;
+            padding: 0 30px;
+            margin-left: 15px;
+            background-color: #38aef0;
+            color: #ffffff;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+
+  

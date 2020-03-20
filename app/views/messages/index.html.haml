@@ -1,0 +1,40 @@
+.wrapper
+  .side-bar
+    .user-name
+      .user-name__name
+        shota
+      .user-name__menu
+        = link_to root_path, class: "user-name__edit" do
+          =icon('far','edit', class: "user-name__icon" )
+          %span<>
+        = link_to root_path, class: "user-name__set" do
+          =icon('fas','cog', class: "user-name__icon")
+          %span<>
+        
+    .group-list
+      = render partial: 'side_bar'
+
+  .main-chat
+    .group-info
+      .group-info__group
+        .group-info__group-name
+          test
+
+        .group-info__group-member
+          member
+      .group-info__menu
+        =link_to root_path, class: "group-info__edit" do
+          Edit
+    
+    .message-list
+      = render partial: 'main_chat'
+      
+    .form
+      %form.new_message
+        .form-input
+          %input{type: "text", class: 'form-input__text', placeholder: 'type a message'}
+          %label{class: "form-input__image"}
+            = icon('fas', 'image')
+            %input{type: "file",class: "form-input__image__file"}
+        %input{type: "submit", value: "Send", class: "form-input__submit-btn"}
+
