@@ -1,19 +1,6 @@
 .wrapper
-  .side-bar
-    .user-name
-      .user-name__name
-        = current_user.name
-      .user-name__menu
-        = link_to root_path, class: "user-name__edit" do
-          =icon('far','edit', class: "user-name__icon" )
-          %span<>
-        = link_to edit_user_path(current_user), class: "user-name__set" do
-          =icon('fas','cog', class: "user-name__icon")
-          %span<>
-        
-    .group-list
-      = render partial: 'side_bar'
-
+  = render partial: 'side_bar'
+  
   .main-chat
     .group-info
       .group-info__group

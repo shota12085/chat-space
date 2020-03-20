@@ -34,7 +34,7 @@
       line-height: 20px;
       text-align: right;
     }
-    &__edit {
+    &__create {
       padding-right: 5px;
     }
     &__icon {
@@ -50,6 +50,11 @@
     &__group-name {
       font-size: 15px;
       margin-bottom: 5px;
+    }
+    /*調整のため、aタグ追加変更*/
+    a{
+      text-decoration: none;
+      color: $font-color;
     }
     &__message {
       font-size: 11px;
