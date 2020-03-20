@@ -1,4 +1,19 @@
-.group-list__group-name
-  techcamp
-.group-list__message
-  まだメッセージはありません
+.side-bar
+  .user-name
+    .user-name__name
+      = current_user.name
+    .user-name__menu
+      = link_to new_group_path, class: "user-name__create" do
+        =icon('far','edit', class: "user-name__icon" )
+        %span<>
+      = link_to edit_user_path(current_user), class: "user-name__edit" do
+        =icon('fas','cog', class: "user-name__icon")
+        %span<>
+        
+  .group-list
+    - current_user.groups.each do |group|
+      = link_to edit_group_path(group.id) do
+        .group-list__group-name
+          = group.name
+        .group-list__message
+          メッセージはありません
