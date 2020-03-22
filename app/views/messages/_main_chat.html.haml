@@ -1,7 +1,26 @@
-.message-list__group
-  .message-list__user-name
-    shota
-  .message-list__date
-    2020/03/19(Thu) 19:34:54
-.message-list__user-message
-  こんばんは
+.main-chat
+  .group-info
+    .group-info__group
+      .group-info__group-name
+        = @group.name
+
+      .group-info__group-member
+        %a member :
+        - @group.users.each do |member|
+          = member.name
+    .group-info__menu
+      =link_to edit_group_path(@group), class: "group-info__edit" do
+        Edit
+    
+  .message-list
+    = render @messages
+    
+
+  .form
+    = form_for [@group, @message] do |f|
+      .form-input
+        = f.text_field :content, class: 'form-input__text', placeholder: 'type a message'
+        = f.label :image, class: 'form-input__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'form-input__image__file'
+      = f.submit 'Send', class: 'form-input__submit-btn'
