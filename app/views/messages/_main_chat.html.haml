@@ -11,9 +11,8 @@
     .group-info__menu
       =link_to edit_group_path(@group), class: "group-info__edit" do
         Edit
-  .message  
-    .message-list
-      = render @messages
+  .message
+    = render @messages
     
 
   .form
